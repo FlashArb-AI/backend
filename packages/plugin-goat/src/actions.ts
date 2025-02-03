@@ -24,14 +24,6 @@ export async function getOnChainActions(wallet: WalletClientBase) {
             examples: [],
         },
         // 1. Add your actions here
-        {
-            name: "EXPLORE_ARBITRAGE",
-            description:
-                "Explore arbitrage opportunities across decentralised exchanges",
-            similes: [],
-            validate: async () => true,
-            examples: [],
-        },
     ];
 
     const tools = await getOnChainTools({
