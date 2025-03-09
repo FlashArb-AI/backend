@@ -24,6 +24,7 @@ import {
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
 import { exploreArbitrageAction } from "./actions/exploreArbitrage.ts";
+import { showPastTradesAction } from "./actions/showPastTrades.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -62,7 +63,7 @@ export function createAgent(
       character.settings?.secrets?.WALLET_PUBLIC_KEY ? solanaPlugin : null,
     ].filter(Boolean),
     providers: [],
-    actions: [exploreArbitrageAction],
+    actions: [exploreArbitrageAction, showPastTradesAction],
     services: [],
     managers: [],
     cacheManager: cache,
